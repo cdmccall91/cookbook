@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pub Cook Book</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #4d94ff;">
+  <div class="container">
+
+      <input id="filter" name="searchbox" onfocus="if (this.value=='Search') this.value = ''" type="text" value="Search" oninput="myFunction()">
+      <ul id="recipe-list" style="display:none;">
+        <li class="recipe-links"><a href="#">Home</a></li>
+        <li class="recipe-links"><a href="#">French Onion Soup</a></li>
+        <li class="recipe-links"><a href="#">Au Jus</a></li>
+        <li class="recipe-links"><a href="#">Spinach Dip</a></li>
+        <li class="recipe-links"><a href="#">Croutons</a></li>
+        <li class="recipe-links"><a href="#">Fajita</a></li>
+        <li class="recipe-links"><a href="#">Killian's Beer Cheese Soup</a></li>
+        <li class="recipe-links"><a href="#">Tartar Sauce</a></li>
+        <li class="recipe-links"><a href="#">Alfredo Sauce</a></li>
+        <li class="recipe-links"><a href="#">BBQ Sauce</a></li>
+        <li class="recipe-links"><a href="#">Blue Cheese Dressing</a></li>
+        <li class="recipe-links"><a href="#">Buffalo Chicken Dip</a></li>
+        <li class="recipe-links"><a href="#">Caeser Dressing</a></li>
+        <li class="recipe-links"><a href="#">Chicken Noodle Soup</a></li>
+        <li class="recipe-links"><a href="#">Chicken Salad</a></li>
+        <li class="recipe-links"><a href="#">Clam Chowder</a></li>
+        <li class="recipe-links"><a href="#">Cream of Mushroom Soup</a></li>
+        <li class="recipe-links"><a href="#">Mashed Potatoes</a></li>
+        <li class="recipe-links"><a href="#">Shepherd's Pie</a></li>
+        <li class="recipe-links"><a href="#">Steak Sauce</a></li>
+        <li class="recipe-links"><a href="#">Mild Wing Sauce</a></li>
+        <li class="recipe-links"><a href="#">Hot Wing Sauce</a></li>
+        <li class="recipe-links"><a href="#">Cherry Butter</a></li>
+      </ul>
+
+      <div id="logo">
+        <img src="images/publogo.png" width="100%">
+        <h1 id="cookbook">Cookbook</h1>
+      </div>
+
+
+
+    <div id="display-area-container">
+      <h2 id="header"></h2>
+      <div id="batch-converter-wrapper">
+        <select id="batch-converter" style="display: none">
+          <option value="0" selected>Full Batch</option>
+          <option value="1">Half Batch</option>
+          <option value="2">Quarter Batch</option>
+          <option value="3">Double Batch</option>
+        </select>
+      </div>
+      <div id="recipe-display-area">
+        <ul id="amount-list"></ul>
+        <ul id="ingredient-list"></ul>
+        <ul id="measurement-list"></ul>
+      </div>
+      <p id="paragraph"></p>
+    </div>
+      
+  </div> <!-- Container End -->
+  
+
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
