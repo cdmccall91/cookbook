@@ -86,15 +86,16 @@ option:hover {
 
 #recipe-display-area {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 25px;
   padding: 10px;
 }
 
+
+
 #display-area-container li {
   padding: 5px;
   text-align: center;
-  min-width: 100px !important;
 }
 
 #paragraph {
