@@ -56,6 +56,11 @@ const hotSauce = new Recipe('Hot Wing Sauce', [1, 1.5, 1, 1, .75, 1], ['Frank\'s
 allRecipes.push(hotSauce);
 const cherryButter = new Recipe('Cherry Butter', [3, 3, .25, 1, 3], ['Dried Cherries', 'Sugar ', 'Grenadine', 'Butter', 'Honey'],['Cups', 'Packets', 'Cups', 'lb', 'oz'],'Boil cherries for 2 minutes. Strain and put in blender with cubed butter, honey, sugar and grenadine')
 allRecipes.push(cherryButter);
+const croutons = new Recipe('Croutons', [1, .50, 2, 1, 1, 1], ['Bread', 'Margarine', 'Gran. Garlic', 'Parsley', 'Paprika', 'Gran. Onion'],['Loave', 'lb', 'Tblsp', 'Tblsp', 'Tblsp', 'Tblsp'],'Cut scrap bread into .25 inch chunks. Mix other ingredients in a mixing bowl. Place onto sheet pan and bake at 350 for approximately 15 minutes Do NOT BURN!!!')
+allRecipes.push(croutons);
+const fajita = new Recipe('Fajita', [10, 1, 2], ['Chicken', 'Mesquite Seas. ', 'Oil'],['lb', 'Cups', 'Cups'],'Marinate chicken over night. Bake. Cut into strips and place on sheet tray to freeze. Portion into 6oz bags')
+allRecipes.push(fajita);
+
 
 
 
