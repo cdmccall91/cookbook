@@ -66,10 +66,16 @@ li {
 
 select {
   color: black;
+  font-size: 20px;
 }
 
 option {
   color: black;
+  font-size: 15px;
+}
+
+option:hover {
+  background-color: #4d94ff;
 }
 
 #header {
@@ -88,6 +94,7 @@ option {
 #display-area-container li {
   padding: 5px;
   text-align: center;
+  min-width: 100px !important;
 }
 
 #paragraph {
