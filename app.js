@@ -60,6 +60,7 @@ function clearList() {
 }
 
 // Generating and Displaying the Recipes
+// First is reicpe title and the Amount List
 for (let i = 0; i < recipeLinks.length; i++) {
   recipeLinks[i].addEventListener('click', (e) => {
     removeHome();
@@ -81,54 +82,55 @@ for (let i = 0; i < recipeLinks.length; i++) {
       amountList.appendChild(li);
     })
 
-      // Batch Converter
-      batchConverter.addEventListener('change', batchConverterFunction);
-      function batchConverterFunction(e) {
-        if (this.options[this.selectedIndex].value === '0') {
-          clearList();
-          let amount = x.amount;
-          amount.forEach(function (am) {
-            var li = document.createElement('li');
-            var text = document.createTextNode(am);
-            li.appendChild(text);
-            amountList.appendChild(li);
-          })
-        }
-        else if (this.options[this.selectedIndex].value === '1') {
-          clearList();
-          const map1 = amount.map(x => x * .5);
-          map1.forEach(function (am) {
-            var li = document.createElement('li');
-            var text = document.createTextNode(am);
-            li.appendChild(text);
-            amountList.appendChild(li);
-          })
-        }
-
-        else if (this.options[this.selectedIndex].value === '2') {
-          clearList();
-          const map1 = amount.map(x => x * .25);
-          map1.forEach(function (am) {
-            var li = document.createElement('li');
-            var text = document.createTextNode(am);
-            li.appendChild(text);
-            amountList.appendChild(li);
-          })
-        }
-
-        else if (this.options[this.selectedIndex].value === '3') {
-          clearList();
-          const map1 = amount.map(x => x * 2);
-          map1.forEach(function (am) {
-            var li = document.createElement('li');
-            var text = document.createTextNode(am);
-            li.appendChild(text);
-            amountList.appendChild(li);
-          })
-        }
-
+    // Batch Converter
+    batchConverter.addEventListener('change', batchConverterFunction);
+    function batchConverterFunction(e) {
+      if (this.options[this.selectedIndex].value === '0') {
+        clearList();
+        let amount = x.amount;
+        amount.forEach(function (am) {
+          var li = document.createElement('li');
+          var text = document.createTextNode(am);
+          li.appendChild(text);
+          amountList.appendChild(li);
+        })
+      }
+      else if (this.options[this.selectedIndex].value === '1') {
+        clearList();
+        const map1 = amount.map(x => x * .5);
+        map1.forEach(function (am) {
+          var li = document.createElement('li');
+          var text = document.createTextNode(am);
+          li.appendChild(text);
+          amountList.appendChild(li);
+        })
       }
 
+      else if (this.options[this.selectedIndex].value === '2') {
+        clearList();
+        const map1 = amount.map(x => x * .25);
+        map1.forEach(function (am) {
+          var li = document.createElement('li');
+          var text = document.createTextNode(am);
+          li.appendChild(text);
+          amountList.appendChild(li);
+        })
+      }
+
+      else if (this.options[this.selectedIndex].value === '3') {
+        clearList();
+        const map1 = amount.map(x => x * 2);
+        map1.forEach(function (am) {
+          var li = document.createElement('li');
+          var text = document.createTextNode(am);
+          li.appendChild(text);
+          amountList.appendChild(li);
+        })
+      }
+
+    }
+    
+    // Ingredient list
     const ingredients = x.ingredients;
     ingredients.forEach(function (food) {
       var li = document.createElement('li');
@@ -137,6 +139,7 @@ for (let i = 0; i < recipeLinks.length; i++) {
       ingredientList.appendChild(li);
     })
 
+    // Measurement list
     const measurement = x.measurement;
     measurement.forEach(function (food) {
       var li = document.createElement('li');
@@ -145,9 +148,11 @@ for (let i = 0; i < recipeLinks.length; i++) {
       measurementList.appendChild(li);
     })
 
+    // Instructions
     const instructions = x.instructions;
     paragraph.textContent = instructions;
 
+    // Displaying Batch Converter
     batchConverter.style.display = 'block';
   });
 }
