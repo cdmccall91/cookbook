@@ -14,6 +14,7 @@
 
 .container {
   width: 90%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -52,6 +53,10 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 3em;
+}
+
+img {
+  max-width: 600px;
 }
 
 #logo h1 {
@@ -104,4 +109,6 @@ option:hover {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
+
 
